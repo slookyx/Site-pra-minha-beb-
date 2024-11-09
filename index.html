@@ -8,18 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>Para você, meu amor ❤️</h1>
-        <p>Eu só quero te lembrar o quanto você é especial para mim e que não quero ver você triste nem magoada.</p>
-        <p>Prometo fazer o meu melhor para que a gente se entenda cada vez mais. Te amo de verdade! 💖</p>
-        <p>Você me completa de uma forma que eu nem imaginava ser possível. 💕</p>
-        <button onclick="displayMessage()">Clique aqui para ver meu amor por você</button>
-        <p id="message" style="display: none;">Eu te amo com todo meu coração! Nunca se esqueça disso! ❤️❤️❤️</p>
+        <div class="hearts">
+            <span>❤️</span><span>💖</span><span>💕</span><span>💞</span><span>💘</span>
+        </div>
+        <h1>Para você, meu amor</h1>
+        <p>Você é a pessoa mais especial da minha vida, e não quero que nada te deixe triste.</p>
+        <p>Saiba que eu te amo muito e quero que a gente seja sempre feliz juntos. 💖</p>
+        <button onclick="displayMessage()">Clique aqui para sentir meu amor 💕</button>
+        <p id="message" class="hidden">Eu te amo com todo meu coração! Nunca se esqueça disso! ❤️❤️❤️</p>
     </div>
+    <script>
+        function displayMessage() {
+            document.getElementById("message").classList.remove("hidden");
+            document.getElementById("message").classList.add("fade-in");
+        }
+    </script>
 </body>
-<script>
-    function displayMessage() {
-        document.getElementById("message").style.display = "block";
-    }
-</script>
 </html>
-
